@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Folding Card</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6e2a8;
+  font-family: Arial, sans-serif;
+}
+
+/* Card container */
+.card {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  perspective: 1200px;
+}
+
+/* Card base (inside) */
+.card-base {
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 110px;
+  box-sizing: border-box;
+}
+
+/* Front cover */
+.card-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  border-radius: 6px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+  transform-origin: top;
+  transition: transform 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Open animation */
+.card.open .card-cover {
+  transform: rotateX(-160deg);
+}
+
+/* Text styles */
+.cover-text {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.inside-text {
+  font-size: 14px;
+  padding: 0 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" onclick="this.classList.toggle('open')">
+
+  <div class="card-cover">
+    <div class="cover-text">
+      <img src="https://assets.codepen.io/4927073/ValCard.png" alt="Description" width="300" height="500">
+    </div>
+  </div>
+
+  <div class="card-base">
+    <div class="inside-text">
+      <strong>Dear Aryaa...!!!</strong><br><br>
+      <p>Hey, I just wanted to say something honestly and calmly.
+I’ve started liking you over these past days, and it felt right to be real instead of keeping it inside.
+I’m not expecting anything from you, and I completely respect whatever you feel.
+Every efforts I did was because I wanted to, not to expect something back.
+I already understand if your answer is no, and that’s completely okay.
+You don’t owe me a yes or an explanation, I just wanted you to know this came from a genuine place.
+No awkwardness, no pressure. Just honesty 🙂
+I just didn’t want to hide something real. I respect you a lot 🤍</p>
+      <strong></strong>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+
